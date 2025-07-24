@@ -1,14 +1,13 @@
-import { fetchAllCharacters } from './services/api'
+import { fetchCharacters } from './services/api'
 
 export async function App () {
-  const allChars = await fetchAllCharacters()
+  const allUserChars = await fetchCharacters()
 
   return `
     <h1> PERSONAJES </h1>
-    ${allChars.map(char => `
+    ${allUserChars.map(char => `
         <div>
           <h2>${char.name}</strong></h2>
-
           <p><strong>Species:</strong> ${char.race}</p>
           
           <img src="${char.image}" width="300" height="300" align="center">
