@@ -8,6 +8,7 @@ export async function App () {
     ${allUserChars.map(char => `
         <div>
           <h2>${char.name}</strong></h2>
+          <h3>Submitted by: ${char.username}</h3>
           <p><strong>Species:</strong> ${char.race}</p>
           
           <img src="${char.image}" width="300" height="300" align="center">
